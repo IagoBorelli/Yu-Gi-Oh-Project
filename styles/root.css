@@ -1,0 +1,30 @@
+:root {
+    --CorPrincipal: #222529;
+    --CorSecundaria: #2C3035;
+    --Branco: #ffffff;
+    --Preto: #1c1f22;
+    --Cinza: #787b7f;
+    --dourado: #dda765;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.navbar {
+    background-image: url(../assets/images/bg.png);
+    opacity: 0.9;
+    border-bottom: 2px solid var(--CorSecundaria);
+}
+
+.nav-link ,
+.navbar-brand {
+    color: var(--dourado);
+}
+
+.nav-link:hover,
+.navbar-brand:hover {
+    color: var(--dourado);
+}

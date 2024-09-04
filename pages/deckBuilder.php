@@ -2,252 +2,29 @@
 <html lang="pt-BR">
 
 <head>
+    <!-- META_TAGS -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- BOOTSTRAP -->
+    <!-- BOOTSTRAP_CDN -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
-    <!-- CSS -->
-    <style>
-        :root {
-            --CorPrincipal: #222529;
-            --CorSecundaria: #2C3035;
-            --Branco: #ffffff;
-            --Preto: #101113;
-            --Cinza: #787b7f;
-            --dourado: #dda765;
-        }
-
-        body {
-            font-family: Arial, sans-serif;
-            background-color: var(--CorPrincipal);
-            color: var(--Branco);
-        }
-
-        h1 {
-            text-align: center;
-            margin-top: 20px;
-            color: var(--dourado);
-        }
-
-        form {
-            background-color: var(--CorSecundaria);
-            padding: 20px;
-            margin: 20px auto;
-            width: 80%;
-            border-radius: 8px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        #card-name {
-            margin-right: 10px;
-            padding: 5px;
-            border: none;
-            border-radius: 4px;
-            outline: none;
-            width: 200px;
-        }
-
-        button {
-            background-color: var(--dourado);
-            border: none;
-            padding: 8px 12px;
-            border-radius: 4px;
-            color: var(--Branco);
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
-
-        button:hover {
-            background-color: #bf8d54;
-        }
-
-        .deck-area {
-            background-color: var(--CorSecundaria);
-            margin: 20px;
-            padding: 10px;
-            border-radius: 8px;
-        }
-
-        .card-grid {
-            display: grid;
-            gap: 5px;
-        }
-
-        #search-results {
-            grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
-            margin: 0 20px;
-            overflow-x: auto;
-            white-space: nowrap;
-        }
-
-        #main-deck-cards {
-            grid-template-columns: repeat(10, 1fr);
-            grid-template-rows: repeat(6, 140px);
-        }
-
-        #extra-deck-cards,
-        #side-deck-cards {
-            grid-template-columns: repeat(15, 1fr);
-            grid-template-rows: 140px;
-        }
-
-        .card {
-            width: 100px;
-            height: 140px;
-            border: 1px solid #000;
-            position: relative;
-            cursor: pointer;
-            background-size: cover;
-        }
-
-        .icon-zoom {
-            position: absolute;
-            top: 5px;
-            right: 5px;
-            width: 15px;
-            height: 15px;
-            background-color: rgba(255, 255, 255, 0.7);
-            border-radius: 50%;
-            display: none;
-            justify-content: center;
-            align-items: center;
-            font-size: 12px;
-            font-weight: bold;
-            cursor: pointer;
-        }
-
-        .card:hover .icon-zoom {
-            display: flex;
-        }
-
-        .max-count {
-            position: absolute;
-            bottom: 5px;
-            right: 5px;
-            width: 20px;
-            height: 20px;
-            background-color: var(--Branco);
-            color: red;
-            border-radius: 50%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 12px;
-            font-weight: bold;
-        }
-
-        #modal {
-            display: none;
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 600px;
-            background-color: var(--CorSecundaria);
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-            padding: 20px;
-            z-index: 1000;
-            border-radius: 8px;
-        }
-
-        #modal img {
-            width: 80px;
-            height: 120px;
-            float: left;
-            margin-right: 20px;
-        }
-
-        #modal-content {
-            overflow: auto;
-            color: var(--Branco);
-        }
-
-        #overlay {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.5);
-            z-index: 500;
-        }
-
-        .close-modal {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            cursor: pointer;
-            color: var(--Branco);
-            font-size: 20px;
-        }
-
-        .deck-select {
-            margin-top: 10px;
-            color: var(--Cinza);
-        }
-
-        .deck-select select,
-        .deck-select input {
-            background-color: var(--CorSecundaria);
-            color: var(--Branco);
-            border: none;
-            padding: 5px;
-            border-radius: 4px;
-            outline: none;
-            cursor: pointer;
-            margin-top: 10px;
-        }
-    </style>
-    <title>Yu-Gi-Oh! Deck Builder</title>
+    <!-- IONICONS_CDN -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <!-- CHARTJS_CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- CSS_LINK -->
+    <link rel="stylesheet" href="../styles/deckBuilder.css">
+    <link rel="stylesheet" href="../styles/root.css">
+    <!-- TITLE -->
+    <title>Project Y</title>
 </head>
 
 <body>
-    <header>
-        <nav class="navbar navbar-expand-lg">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="../index.html">PROJECT Y</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
-                    aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="../probabilidade/index.html">PROBABILIDADE</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                                aria-expanded="false">
-                                CARDS
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">BUSCAR CARTA</a></li>
-                                <li><a class="dropdown-item" href="#">DECK BUILDER</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">RULLINGS</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">CRONÔMETRO</a>
-                        </li>
-
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </header>
+    <?php include '../includes/header.php' ?>
     <main>
         <h1>Construtor de Deck Yu-Gi-Oh!</h1>
         <form id="card-search-form">

@@ -1,31 +1,11 @@
-:root {
-    --CorPrincipal: #222529;
-    --CorSecundaria: #2C3035;
-    --Branco: #ffffff;
-    --Preto: #1c1f22;
-    --Cinza: #787b7f;
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 body{
-    background-image: url(../../images/bg.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
+    height: 93.8vh;
     color: var(--Branco);
    
 }
 
 main {
     background-color: var(--CorPrincipal);
-    width: 93%;
     height: 100%;
     display: flex;
     flex-direction: column;
