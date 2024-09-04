@@ -28,3 +28,15 @@
 .navbar-brand:hover {
     color: var(--dourado);
 }
+
+footer {
+    background-color: var(--CorPrincipal);
+    color: var(--Branco);
+    text-align: center;
+    font-size: 8pt;
+}
+
+footer p {
+    width: 90%;
+    margin-left: 5%;
+}
